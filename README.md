@@ -6,5 +6,5 @@
 ### Imprementation
 * In the root of your theme folder, create a file called recent-post-carousel.php 
 * Add CSS 
-* Open header.php file, Paste this line  ```<?php include 'recent-post-carousel.php'?>```    after <head> tag 
+* Open header.php file, Paste this line  ```<?php include 'recent-post-carousel.php'?>```    after ```<head>``` tag 
 
