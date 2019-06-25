@@ -1,15 +1,14 @@
 #hightlight-content {
   z-index:200;
   position: fixed;
-  top: 50px;
+  top: 50px;  
   width: 100%;
   display: block;
   transition: top 0.3s;
   height: auto;
   white-space: nowrap;
   overflow: hidden;
-}
-
+} 
 .scrollmenu {
   background-color: #232727;
   overflow: auto;
