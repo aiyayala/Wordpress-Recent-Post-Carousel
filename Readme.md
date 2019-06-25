@@ -1,7 +1,7 @@
 ### create a file called recent-post-carousel.php  in the same folder of header.php 
 
 
-/**----------------------------------------Add------   Some-----CSS ----------------------------------/
+### Add CSS 
 
 
 #hightlight-content {
