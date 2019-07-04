@@ -1,13 +1,13 @@
-/*<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>   
 
-*/
+</amp-script>
+
 <?php
 /*<br>
-Plugin Name: AMP Custom Plugin<br>
-Plugin URI: https://wordpress.org/plugins/accelerated-mobile-pages/<br>
-Description: a plugin to create ampcustomplugin and spread joy<br>
+Plugin Name: AMP Recent Post Carousel<br>
+Plugin URI:  <br>
+Description: A plugin to create a recent post carousel<br>
 Version: 1.0<br>
-Author:  Chunhong Lin<br>
+Author:  Chunny<br>
 */
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
@@ -31,41 +31,25 @@ $args = array(
 ); 
 $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 ?>
+
  
 
 <div id="hightlight-content">
     <div class="scrollmenu">
               <?php
         	foreach( $recent_posts as $recent ){
-        	
+        	    $lalala = get_the_post_thumbnail_url( $recent["ID"], 'post-thumbnail');
+        	      
         	        echo '<div class="carousel-post-wrapper"> 
-        	         <div class="carousel-content-wrapper"><a href="' . get_permalink($recent["ID"]) . '">
-        	         <?php if ( has_post_thumbnail() ) : ?>
-                    	 <amp-img src=" '.get_the_post_thumbnail_url('post-thumbnail'). '"></amp-img><?php endif; ?>
-                     </a></div>
-                    
-        	         
-        	       
+        	        <div class="carousel-content-wrapper"><a href="' . get_permalink($recent["ID"]) . '"> <amp-img src=" '.$lalala.' " alt=" " height="90" width="110"></amp-img> </a></div>
         	        <div class="carousel-content-wrapper wrapper-a"><a href="' . get_permalink($recent["ID"]) . '">'. $recent["post_title"].'</a></div></div>';
-        	         
         	}
         	wp_reset_query();
         ?>
     </div>
 </div>
 
-<script>
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("hightlight-content").style.top = "50px";
-  } else {
-    document.getElementById("hightlight-content").style.top = "-190px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-</script>
+
 	<?php 
 } 
 
@@ -102,8 +86,7 @@ function amp_custom_post_carousel_styling() { ?>
 	width:310px;
 }
 .carousel-content-wrapper img{
-	width: 110px;
-	height:90px;
+	 
 	margin:0 5px;
 	border-radius:3px;
 	float: left;
@@ -125,16 +108,13 @@ function amp_custom_post_carousel_styling() { ?>
 	font-weight:600;
 	word-break:break-all;
 	transition:all 0.3s ease-in-out 0s;
-
 }
-
 .wrapper-a {
 	width:200px;} 
 
 ::-webkit-scrollbar { width: 0px; /* Remove scrollbar space */ 
 	background: transparent; /* Optional: just make scrollbar invisible */ }
 
-	
 <?php }
 
 
