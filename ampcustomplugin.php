@@ -1,3 +1,6 @@
+/*<script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>   
+
+*/
 <?php
 /*<br>
 Plugin Name: AMP Custom Plugin<br>
