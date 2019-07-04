@@ -28,14 +28,21 @@ $args = array(
 ); 
 $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 ?>
+ 
 
 <div id="hightlight-content">
     <div class="scrollmenu">
               <?php
         	foreach( $recent_posts as $recent ){
-        	    
+        	
         	        echo '<div class="carousel-post-wrapper"> 
-        	         <div class="carousel-content-wrapper"><a href="' . get_permalink($recent["ID"]) . '"><amp-img src=" ' . get_the_post_thumbnail_url( $recent["ID"], 'post-thumbnail'). '"></amp-img></a></div>
+        	         <div class="carousel-content-wrapper"><a href="' . get_permalink($recent["ID"]) . '">
+        	         <?php if ( has_post_thumbnail() ) : ?>
+                    	 <amp-img src=" '.get_the_post_thumbnail_url('post-thumbnail'). '"></amp-img><?php endif; ?>
+                     </a></div>
+                    
+        	         
+        	       
         	        <div class="carousel-content-wrapper wrapper-a"><a href="' . get_permalink($recent["ID"]) . '">'. $recent["post_title"].'</a></div></div>';
         	         
         	}
@@ -59,13 +66,16 @@ var currentScrollPos = window.pageYOffset;
 	<?php 
 } 
 
+
+
+
 add_action('amp_post_template_css', 'amp_custom_post_carousel_styling');
 function amp_custom_post_carousel_styling() { ?>
 
 #hightlight-content {
   z-index:200;
   position: fixed;
-  top: 0px;  
+  top: 50px;  
   width: 100%;
   display: block;
   transition: top 0.3s;
