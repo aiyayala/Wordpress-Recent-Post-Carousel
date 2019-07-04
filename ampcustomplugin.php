@@ -1,6 +1,3 @@
-
-</amp-script>
-
 <?php
 /*<br>
 Plugin Name: AMP Recent Post Carousel<br>
@@ -33,6 +30,7 @@ $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 ?>
 
  
+  
 
 <div id="hightlight-content">
     <div class="scrollmenu">
@@ -49,6 +47,18 @@ $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
     </div>
 </div>
 
+<script type="text/plain" target="amp-script" id="script">
+var prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+var currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.getElementById("hightlight-content").style.top = "50px";
+  } else {
+    document.getElementById("hightlight-content").style.top = "-190px";
+  }
+  prevScrollpos = currentScrollPos;
+}
+</script>
 
 	<?php 
 } 
