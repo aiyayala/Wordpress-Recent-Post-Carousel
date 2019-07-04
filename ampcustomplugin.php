@@ -35,7 +35,7 @@ $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
         	foreach( $recent_posts as $recent ){
         	    
         	        echo '<div class="carousel-post-wrapper"> 
-        	         <div class="carousel-content-wrapper"><a href="' . get_permalink($recent["ID"]) . '">' . get_the_post_thumbnail( $recent["ID"], 'post-thumbnail'). '</a></div>
+        	         <div class="carousel-content-wrapper"><a href="' . get_permalink($recent["ID"]) . '"><amp-img src=" ' . get_the_post_thumbnail_url( $recent["ID"], 'post-thumbnail'). '"></amp-img></a></div>
         	        <div class="carousel-content-wrapper wrapper-a"><a href="' . get_permalink($recent["ID"]) . '">'. $recent["post_title"].'</a></div></div>';
         	         
         	}
@@ -56,11 +56,96 @@ var currentScrollPos = window.pageYOffset;
   prevScrollpos = currentScrollPos;
 }
 </script>
-
-
-
-
-
 	<?php 
 } 
+
+add_action('amp_post_template_css', 'amp_custom_post_carousel_styling');
+function amp_custom_post_carousel_styling() { ?>
+
+#hightlight-content {
+  z-index:200;
+  position: fixed;
+  top: 0px;  
+  width: 100%;
+  display: block;
+  transition: top 0.3s;
+  height: auto;
+  white-space: nowrap;
+  overflow: hidden;
+} 
+.scrollmenu {
+  background-color: #232727;
+  overflow: auto;
+	height:100%;
+  white-space: nowrap;
+}
+.carousel-content-wrapper a:hover {
+	color:#d12662;
+}
+
+.carousel-post-wrapper{
+	display: inline-block;
+	margin:0 20px 0 0 ;
+	width:310px;
+}
+.carousel-content-wrapper img{
+	width: 110px;
+	height:90px;
+	margin:0 5px;
+	border-radius:3px;
+	float: left;
+  clear: none; 
+}
+.carousel-content-wrapper{
+	white-space: pre-wrap;       
+	white-space: -moz-pre-wrap;  
+	white-space: -o-pre-wrap;    
+	word-wrap: break-word;       
+	display:inline-block;
+	margin:5px 0;
+	vertical-align:middle;
+	 
+}
+
+.carousel-content-wrapper a {
+	color:#fff;
+	font-weight:600;
+	word-break:break-all;
+	transition:all 0.3s ease-in-out 0s;
+
+}
+
+.wrapper-a {
+	width:200px;} 
+
+::-webkit-scrollbar { width: 0px; /* Remove scrollbar space */ 
+	background: transparent; /* Optional: just make scrollbar invisible */ }
+
+	
+<?php }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
