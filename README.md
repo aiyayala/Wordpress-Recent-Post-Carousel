@@ -8,3 +8,5 @@
 * Add CSS 
 * Open header.php file, Paste this line  ```<?php include 'recent-post-carousel.php'?>``` at the bottom 
 
+### Customize plugin 
+* Create a plugin for the feature. 
