@@ -8,5 +8,7 @@
 * Add CSS 
 * Open header.php file, Paste this line  ```<?php include 'recent-post-carousel.php'?>``` at the bottom 
 
-### Customize plugin 
-* Create a plugin for the feature. 
+### Custom plugin 
+* Or create a simple plugin for wordpress.
+* Create a new folder > new file > ampcustomplugin.php 
+
