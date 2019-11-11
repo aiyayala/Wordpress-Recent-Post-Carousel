@@ -11,3 +11,4 @@
 ### [Custom plugin] (https://www.wpbeaverbuilder.com/creating-wordpress-plugin-easier-think/)
 * Or create a simple plugin for wordpress.
 * Create a new folder > new file > ampcustomplugin.php  
+[I'm an inline-style link](https://www.google.com)
