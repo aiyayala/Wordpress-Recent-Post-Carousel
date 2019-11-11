@@ -8,7 +8,7 @@
 * Add CSS 
 * Paste ```<?php include 'recent-post-carousel.php'?>``` to **header.php**
 
-### [Custom plugin](https://www.wpbeaverbuilder.com/creating-wordpress-plugin-easier-think){:target="_blank"}
+### [Custom plugin](https://www.wpbeaverbuilder.com/creating-wordpress-plugin-easier-think){:target="_blank" rel="noopener"}  
 * Or create a simple plugin for wordpress.
 * Create a new folder > new file > ampcustomplugin.php  
 
