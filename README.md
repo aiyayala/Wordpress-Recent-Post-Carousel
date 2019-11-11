@@ -1,5 +1,5 @@
 ## Wordpress Recent Post Carousel 
-### Feature 
+### Features
 * Hide the Carousel when scroll down, show on scroll up. 
 * Display the latest post automatically 
 
@@ -8,7 +8,6 @@
 * Add CSS 
 * Paste ```<?php include 'recent-post-carousel.php'?>``` to **header.php**
 
-### Custom plugin 
+### Custom plugin (https://www.wpbeaverbuilder.com/creating-wordpress-plugin-easier-think/)
 * Or create a simple plugin for wordpress.
-* Create a new folder > new file > ampcustomplugin.php 
-
+* Create a new folder > new file > ampcustomplugin.php  
