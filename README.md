@@ -6,7 +6,7 @@
 ### Imprementation
 * In the root of your theme folder, create a file called recent-post-carousel.php 
 * Add CSS 
-* Paste ```<?php include 'recent-post-carousel.php'?>``` at the bottom of **header.php**
+* Paste ```<?php include 'recent-post-carousel.php'?>``` to **header.php**
 
 ### Custom plugin 
 * Or create a simple plugin for wordpress.
