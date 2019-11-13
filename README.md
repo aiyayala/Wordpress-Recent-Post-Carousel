@@ -4,11 +4,11 @@
 * Display the latest post automatically 
 
 ### Imprementation
-* In the root of your theme folder, create a file called recent-post-carousel.php 
-* Add CSS 
-* Paste ```<?php include 'recent-post-carousel.php'?>``` to **header.php**
+1 In the root of your theme folder, create a file called recent-post-carousel.php 
+2 Add custom CSS 
+3 Paste ```<?php include 'recent-post-carousel.php'?>``` to **header.php**
 
-### [Custom plugin](https://www.wpbeaverbuilder.com/creating-wordpress-plugin-easier-think)
+### or create a [Custom plugin](https://www.wpbeaverbuilder.com/creating-wordpress-plugin-easier-think)
 * Or create a simple plugin for wordpress.
-* Create a new folder > new file > ampcustomplugin.php  
+* Plugin folder > new file > ampcustomplugin.php  
 
