@@ -9,6 +9,7 @@ Author:  Chunny<br>
 // Exit if accessed directly.
 if ( ! defined( 'ABSPATH' ) ) exit;
 
+//get the post and data
 add_action('ampforwp_after_header','amp_custom_post_carousel');
 function amp_custom_post_carousel() { ?>
 <?php
@@ -30,8 +31,6 @@ $recent_posts = wp_get_recent_posts( $args, ARRAY_A );
 ?>
 
  
-  
-
 <div id="hightlight-content">
     <div class="scrollmenu">
               <?php
@@ -62,8 +61,6 @@ var currentScrollPos = window.pageYOffset;
 
 	<?php 
 } 
-
-
 
 
 add_action('amp_post_template_css', 'amp_custom_post_carousel_styling');
