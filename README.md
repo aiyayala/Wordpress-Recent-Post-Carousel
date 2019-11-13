@@ -10,5 +10,5 @@
 
 ### or create a [Custom plugin](https://www.wpbeaverbuilder.com/creating-wordpress-plugin-easier-think)
 1. **Go to wp-content > plugins >create a folder called  recent-post-carousel**
-2. Create a file 
+2. Create a file called **ampcustomplugin.php**.  
 
